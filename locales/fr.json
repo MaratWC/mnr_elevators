@@ -1,0 +1,14 @@
+{
+    "menu": {
+        "access": "Accès",
+        "locked": "Bloqué 🔴",
+        "unlocked": "Débloqué 🟢"
+    },
+    "notify": {
+        "access-denied": "Accès Refusé",
+        "reached-floor": "Vous avez atteint le plan sélectionné"
+    },
+    "textui": {
+        "elevator": "[E] Ascenseur"
+    }
+}
