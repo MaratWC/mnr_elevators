@@ -1,6 +1,6 @@
-local Elevators = lib.load("config.client")
+local elevators = lib.load("config.config")
 
-local function ShowMenu(floors, label, index)
+local function ShowMenu(name, floors, label, index)
     local menu = {}
     for i = 1, #floors do
         local floorOption = {
@@ -9,7 +9,7 @@ local function ShowMenu(floors, label, index)
             icon = floors[i].locked and "fas fa-lock" or "fas fa-lock-open",
             iconColor = floors[i].locked and "#FF0000" or "#008000",
             onSelect = function()
-                local hasAccess = lib.callback.await("mnr_elevators:server:HasAccess", false, floors[i])
+                local hasAccess = lib.callback.await("mnr_elevators:server:HasAccess", false, name, i)
                 if floors[i].locked and not hasAccess then
                     return client.Notify(locale("notify.access-denied"), "error")
                 end
@@ -70,24 +70,15 @@ local function CreateElevator(name, data)
                 end,
                 inside = function()
                     if IsControlJustReleased(0, 38) then
-                        ShowMenu(data.floors, data.label, index)
+                        ShowMenu(name, data.floors, data.label, index)
                     end
                 end,
-                debug = Elevators[name].debug,
+                debug = elevators[name].debug,
             })
         end
     end
 end
 
-local function CreateElevators()
-    for name, data in pairs(Elevators) do
-        CreateElevator(name, data)
-    end
+for name, data in pairs(elevators) do
+    CreateElevator(name, data)
 end
-
-AddEventHandler("onClientResourceStart", function(resourceName)
-    local scriptName = cache.resource or GetCurrentResourceName()
-    if resourceName ~= scriptName then return end
-
-    CreateElevators()
-end)
