@@ -5,7 +5,7 @@ lua54 "yes"
 name "mnr_elevators"
 description "Elevator Script for FiveM Servers"
 author "IlMelons"
-version "1.0.0"
+version "1.0.1"
 repository "https://github.com/Monarch-Development/mnr_elevators"
 
 ox_lib "locale"
