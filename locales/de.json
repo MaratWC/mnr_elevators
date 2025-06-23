@@ -1,9 +1,4 @@
 {
-    "menu": {
-        "access": "Zugang",
-        "locked": "Gesperrt 🔴",
-        "unlocked": "Entsperrt 🟢"
-    },
     "notify": {
         "access-denied": "Zugang Verweigert",
         "reached-floor": "Sie haben den ausgewählten Plan erreicht"

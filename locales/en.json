@@ -1,9 +1,4 @@
 {
-    "menu": {
-        "access": "Access",
-        "locked": "Locked 🔴",
-        "unlocked": "Unlocked 🟢"
-    },
     "notify": {
         "access-denied": "Access Denied",
         "reached-floor": "You have reached the selected floor"
