@@ -35,7 +35,7 @@ return {
             }
         },
     },
-    ---@description Paste the presets here 🔽 [https://github.com/IlMelons/Melons-Presets/tree/main/elevators]
+    ---@description Paste the presets here 🔽 [https://github.com/Monarch-Development/Monarch-Presets/tree/main/elevators]
 
-    ---@description Paste the presets here 🔼 [https://github.com/IlMelons/Melons-Presets/tree/main/elevators]
+    ---@description Paste the presets here 🔼 [https://github.com/Monarch-Development/Monarch-Presets/tree/main/elevators]
 }
